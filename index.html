@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Clarinet Note Recognition</title>
+   <meta charset="utf-8">
+   <title>Clarinet Note Recognition</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+   <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/addons/p5.sound.min.js"></script>
+   <link rel="stylesheet" type="text/css" href="style.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Music&family=Yeon+Sung&display=swap" rel="stylesheet">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.8.0/addons/p5.sound.js"></script>
+</head>
+ 
+
+
+<body background="bg-music.jpg">
+    <center>
+      <div id="headerDiv" >
+        <span id="header">  <h3 class="title"><img src="clarinet.png" id="emoji">Clarinet Note Recognition<img src="music-note.png"></h3>
+        </span>
+        <p>Play a note after clicking the Click button and the system will tell you what note it is.</p>
+        <br>
+        <button id="buttonC" onclick="startClassification()"> Click and play the note </button>
+        <img src="listening.png" id="listen">
+      </div>
+        <br>
+      
+        <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-sm-6" id="Div1">
+                <h4>Webcam</h4>
+                <p1>Look into webcam to see yourself while playing</p1>
+              </div>
+              <div class="col-lg-2 col-sm-6" >
+              </div>
+              <div class="col-lg-4 col-sm-6" id="Div2">
+                <h4>Clarinet note:</h4>
+                <p1><label class="noteC" id="Note">No note played!</label></p1>
+              </div>
+            </div>
+          </div>
+
+          <div class="container" >
+            <div class="row">
+              <div class="row">
+                <div class="col-lg-4 col-sm-6" id="Div3">
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <canvas id="myExtra" width="1" height="100" style="border:1px solid #f5f3f3;"></canvas>
+                  </div>
+                <div class="col-lg-4 col-sm-6" id="Div4">
+                  <img id="myCanvasImg" style="border:1px solid #000000;">
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <br>
+          <p id="warning">Warning - If the system can't figure out what note you played then you might need some practice! The image that shows under the Note Image label is the note on the Grand Staff(Music Notation)</p>
+          <br>
+    </center>
+    <script src="main.js"></script>
+</body>
+      
